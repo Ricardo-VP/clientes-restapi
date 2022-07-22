@@ -1,6 +1,7 @@
 const moongose = require("mongoose");
+require("dotenv").config();
 
-const url = "mongodb://localhost:27017/clientes";
+const url = process.env.MONGO_URI || "mongodb://localhost:27017/clientes";
 
 moongose
   .connect(url, {
