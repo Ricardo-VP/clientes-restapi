@@ -1,3 +1,8 @@
-const routes = [];
+const { Router } = require("express");
+const clientes = require("./clientes/routes");
 
-module.exports = routes;
+const router = Router();
+
+router.use("/clientes", clientes);
+
+module.exports = router;
